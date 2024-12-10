@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <meta charset="utf-8">
-  <title>Abby Vick's Portfolio</title>
+  <title>About Me</title>
   <style>
-    ul {
+    /* Global Styles */
+    body {
+      font-family: "Times New Roman", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      font-size: 6px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 70px;
+      margin: 40px 0;
+      color: #044218;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 19px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+   ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
-      overflow: hidden;
       background-color: #044218;
+      text-align: center;
     }
 
     li {
-      float: left;
+      display: inline;
     }
 
     li a {
-      display: block;
+      display: inline-block;
       color: white;
+      padding: 15px 30px;
+      font-size: 18px;
       text-align: center;
-      padding: 30px 30px;
-      text-size-adjust: 20px;
       text-decoration: none;
     }
 
@@ -30,60 +54,111 @@
     }
 
     .active {
-      background-color: #04AA6D;
+      background-color: #0b8a33;
     }
 
- 
-    img {
-      border: 10px solid #044218;
-      
-      margin-top: 00px;
-      margin-right: 700px
-    }
-    
-    h1 {
-      text-align: center;
-      font-size: 100px;
-      color: #044218;
-      
-      margin-top: 70px;
-      margin-bottom: 20px;
-    }
-    
+    /* About Section Styles */
     .content-container {
       display: flex;
       align-items: center;
+      justify-content: center;
       margin-top: 20px;
+      gap: 30px;
+      flex-wrap: wrap;
     }
-    
+
     .text-box {
-      margin-top: -370px;
-      margin-left: 700px;
-      padding: 0px; 
       width: 400px;
-      font-size: 18px;
-      
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .text-box p {
+      margin-top: 0;
+    }
+
+    .image-container {
+      flex-shrink: 0;
+      width: 600px;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Centering Image Below Text */
+    .image-container-education {
+      width: 1000px; /* Total width of text + first image */
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .image-container-education img {
+      width: 100%; /* Ensure it takes up 100% of the container width */
+      height: auto;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .content-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-box {
+        width: 80%;
+        margin-top: 20px;
+      }
+
+      .image-container,
+      .image-container-education {
+        width: 100%;
+        max-width: 400px;
+      }
     }
   </style>
 </head>
+
 <body>
 
+  <!-- Navbar -->
   <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#aboutme">About Me</a></li>
+    <li><a href="https://avick3.github.io/home/">Home</a></li>
+    <li><a href="#aboutme" class="active">About Me</a></li>
     <li><a href="#work">Work</a></li>
-    <li><a href="contact">Contact</a></li>
+    <li><a href="https://avick3.github.io/contact-me/">Contact</a></li>
   </ul>
-  <h1>
-    About Me
-  
-    <img src="st pats.jpeg" alt="Abby Vick" width="600">
-<div class="text-box">
-  <p>
-    Hello There! My name is Abby Vick and I am a Second Year in the GBDA Program here at the University of Waterloo. I fell in love with creating when I got my hands on an iPad and downloaded VideoStar with my cousin over 10 years ago - it wasn't until grade 10 when I took Communications Technology and succeeded did I realize I could make a career out of this. So far my time here at UW has been absolutely incredible as I have built a bond with people who understand me. I cannot wait to continue to learn and grow not only as a designer but as a person as well.
-  </p>
+
+  <!-- About Section -->
+  <section id="aboutme">
+    <h1>About Me</h1>
+    <div class="content-container">
+      <!-- Text Box -->
+      <div class="text-box">
+        <p>
+          Hello there! My name is Abby Vick, and I am a second-year student in the GBDA Program at the University of Waterloo. My journey into design began over 10 years ago when I first used an iPad with my cousin and explored VideoStar. It wasn’t until grade 10 when I took Communications Technology that I realized I could turn my passion for creating into a career. My time at UW has been amazing so far, and I’m excited to continue learning and growing  as a designer and as a person.
+        </p>
+      </div>
+
+      <!-- Image (Abby Vick) -->
+      <div class="image-container">
+        <img src="st pats.jpeg" alt="Abby Vick">
+      </div>
     </div>
-  </h1>
-  <img src="Education.jpg" alt="about me" width="900">
+
+    <!-- Second Image (Education) -->
+    <div class="image-container-education">
+      <img src="education.png" alt="Education">
+    </div>
+  </section>
+
 </body>
+
 </html>
